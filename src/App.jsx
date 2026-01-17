@@ -1,15 +1,16 @@
 import { useState, useEffect, useRef } from 'react'
 import Scene from './components/Scene'
 import MatrixBackground from './components/MatrixBackground'
+import { asciiArt } from './ascii'
 
 function App() {
     // Helper to generate help content to reuse in initial state
     const getHelpContent = (onCmd) => (
         <div className="response-list">
             <div>Available commands:</div>
-            <div>- <span className="cmd clickable" onClick={() => onCmd('./projects')}>./projects</span>: View my projects</div>
-            <div>- <span className="cmd clickable" onClick={() => onCmd('./about')}>./about</span>: About me</div>
-            <div>- <span className="cmd clickable" onClick={() => onCmd('./contact')}>./contact</span>: Contact info</div>
+            <div>- <span className="cmd clickable" onClick={() => onCmd('projects')}>projects</span>: View my projects</div>
+            <div>- <span className="cmd clickable" onClick={() => onCmd('about')}>about</span>: About me</div>
+            <div>- <span className="cmd clickable" onClick={() => onCmd('contact')}>contact</span>: Contact info</div>
             <div>- <span className="cmd clickable" onClick={() => onCmd('clear')}>clear</span>: Clear terminal</div>
         </div>
     );
@@ -35,23 +36,40 @@ function App() {
             case 'help':
                 response = getHelpContent(handleCommand);
                 break;
-            case './projects':
+            case 'projects':
                 response = (
                     <div className="response-list">
                         <div>My Projects:</div>
-                        <div>1. <a href="https://github.com/lpoley/project1" target="_blank" rel="noopener noreferrer">Project Alpha</a> - A cool thing</div>
-                        <div>2. <a href="https://github.com/lpoley/project2" target="_blank" rel="noopener noreferrer">Project Beta</a> - Another cool thing</div>
-                        <div>3. <a href="#" onClick={(e) => e.preventDefault()}>Nested Link Demo</a></div>
+                        <div>1. <a href="https://github.com/lukepoley/Internetworking-Projects" target="_blank" rel="noopener noreferrer">Internetworking Projects</a> - A collection of computer networking projects exploring the Internet’s layered architecture, core protocols (TCP, UDP, IP, BGP, DNS), and real-world trade-offs through hands-on implementation and measurement.</div>
+                        <div>2. <a href="https://github.com/lukepoley/Sales-Tax-Automation" target="_blank" rel="noopener noreferrer">Sales Tax Automation & Audit Preparation Tool</a> - A high-performance Python-based automation tool designed to streamline the extraction, filtering, and reporting of Joint Interest Billing (JIB) data for tax compliance</div>
+                        <div>3. Check out my <a href="https://github.com/lukepoley/Website-Projects" target="_blank" rel="noopener noreferrer">Github</a> for more projects</div>
                     </div>
                 );
                 break;
-            case './about':
-                response = "I am a developer who loves terminals and 3D graphics.";
-                break;
-            case './contact':
+            case 'about':
                 response = (
                     <div>
-                        Email: <a href="mailto:lpoley@example.com">lpoley@example.com</a>
+                        <div>Hey there, I'm Luke Poley.</div>
+                        <div>I am currently a Junior studying Computer Science at Carleton College, who is originally from Los Angeles. </div>
+                        <div>Occasionally, I’ll read philosophy (for boredom), climb a 14er, play golf for the aura, come up with a cool new board game idea, or play sports to strength my agency.</div>
+                        <p></p>
+                        <div>Fun Facts!: </div>
+                        <div> I daily drive a partition of CachyOS on my Asus G14</div>
+                        <div> Two of my favorite books are Evidence and Agency by Berislav Marušić and Games: Agency As Art by C. Thi Nguyen</div>
+                        <div> The two food groups are snacks and meals </div>
+                        <p></p>
+                        <div>Here is a ascii rendition of myself</div>
+                        <pre style={{ fontSize: '6px', lineHeight: '6px' }}>
+                            {asciiArt}
+                        </pre>
+                    </div>
+                );
+                break;
+            case 'contact':
+                response = (
+                    <div>
+                        Email: <a href="mailto:poleydev@gmail.com">poleydev@gmail.com</a><br />
+                        GitHub: <a href="https://github.com/lukepoley">lukepoley</a>
                     </div>
                 );
                 break;
