@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --terminal-green: #0f0;
+    --terminal-bg: transparent;
+    /* Background is handled by 3D scene canvas */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: var(--terminal-green);
+    font-family: 'VT323', monospace;
+    -webkit-font-smoothing: none;
+}
+
+.app-container {
+    display: flex;
+    /* Flex layout */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Left Interactive Terminal */
+.terminal-interface {
+    position: absolute;
+    /* Place over the canvas */
+    top: 0;
+    left: 0;
+    width: 50vw;
+    /* Occupy left half */
+    height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Start from top */
+    /* Scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: var(--terminal-green) transparent;
+}
+
+.terminal-interface::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-interface::-webkit-scrollbar-thumb {
+    background-color: var(--terminal-green);
+}
+
+.line {
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    /* Prevent overflow */
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.line.command {
+    margin-top: 10px;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 8px;
+}
+
+.cmd {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Input Styling */
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    color: var(--terminal-green);
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    outline: none;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--terminal-green);
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.clickable {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.clickable:hover {
+    background: rgba(0, 255, 0, 0.2);
+}
+
+/* Canvas is background/z-indez 0, handled in Scene.jsx */
+canvas {
+    display: block;
+}
