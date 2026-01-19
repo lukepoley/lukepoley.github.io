@@ -43,24 +43,23 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     /* Start from top */
-    /* Scrollbar styling */
-    scrollbar-width: thin;
-    scrollbar-color: var(--terminal-green) transparent;
+    /* Scrollbar styling - hidden */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
 .terminal-interface::-webkit-scrollbar {
-    width: 8px;
-}
-
-.terminal-interface::-webkit-scrollbar-thumb {
-    background-color: var(--terminal-green);
+    display: none;
 }
 
 .line {
     margin-bottom: 5px;
     word-wrap: break-word;
     /* Prevent overflow */
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.4;
 }
 
@@ -89,7 +88,7 @@ body {
     border: none;
     color: var(--terminal-green);
     font-family: 'VT323', monospace;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     outline: none;
     flex: 1;
     padding: 0;
