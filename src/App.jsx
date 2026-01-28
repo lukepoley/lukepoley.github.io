@@ -42,7 +42,7 @@ function App() {
                         <div>My Projects:</div>
                         <div>1. <a href="https://github.com/lukepoley/Internetworking-Projects" target="_blank" rel="noopener noreferrer">Internetworking Projects</a> - A collection of computer networking projects exploring the Internet’s layered architecture, core protocols (TCP, UDP, IP, BGP, DNS), and real-world trade-offs through hands-on implementation and measurement.</div>
                         <div>2. <a href="https://github.com/lukepoley/Sales-Tax-Automation" target="_blank" rel="noopener noreferrer">Sales Tax Automation & Audit Preparation Tool</a> - A high-performance Python-based automation tool designed to streamline the extraction, filtering, and reporting of Joint Interest Billing (JIB) data for tax compliance</div>
-                        <div>3. Check out my <a href="https://github.com/lukepoley/Website-Projects" target="_blank" rel="noopener noreferrer">Github</a> for more projects</div>
+                        <div>3. Check out my <a href="https://github.com/lukepoley/" target="_blank" rel="noopener noreferrer">Github</a> for more projects</div>
                     </div>
                 );
                 break;
