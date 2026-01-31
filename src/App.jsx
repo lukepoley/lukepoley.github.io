@@ -40,9 +40,19 @@ function App() {
                 response = (
                     <div className="response-list">
                         <div>My Projects:</div>
-                        <div>1. <a href="https://github.com/lukepoley/Internetworking-Projects" target="_blank" rel="noopener noreferrer">Internetworking Projects</a> - A collection of computer networking projects exploring the Internet’s layered architecture, core protocols (TCP, UDP, IP, BGP, DNS), and real-world trade-offs through hands-on implementation and measurement.</div>
+                        <div>1. <a href="https://github.com/lukepoley/Internetworking-Projects" target="_blank" rel="noopener noreferrer">Internetworking Projects</a> - A collection of computer networking projects exploring the Internet’s layered architecture, core protocols (TCP, UDP, IP, BGP, DNS), and real-world trade-offs through hands-on implementation and measurement. Includes: </div>
+                        <div>
+                            <div>▪ A Python-based implementation of the early gopher protocol for peer to peer file sharing</div>
+                            <div>▪ Educational presentations on network topologies with discussion on bandwidth and latency and another
+                                presentation on how TCP works with each step in Wireshark in relation to a website’s components
+                            </div>
+                            <div>▪ Blog-styled explainer on how BGP’s policy-based routing works between autonomous systems </div>
+                        </div>
                         <div>2. <a href="https://github.com/lukepoley/Sales-Tax-Automation" target="_blank" rel="noopener noreferrer">Sales Tax Automation & Audit Preparation Tool</a> - A high-performance Python-based automation tool designed to streamline the extraction, filtering, and reporting of Joint Interest Billing (JIB) data for tax compliance</div>
-                        <div>3. Check out my <a href="https://github.com/lukepoley/" target="_blank" rel="noopener noreferrer">Github</a> for more projects</div>
+                        <div>3. <a href="https://github.com/lukepoley/Internetworking-Projects/tree/main/network-detection-app" target="_blank" rel="noopener noreferrer">Network Detection App</a> - A powerful Kotlin app that helps you analyze your WiFi network, detect signal dead zones, measure connection speed, and identify potential bandwidth hogs.</div>
+                        <div>4. <a href="https://github.com/lukepoley/Internetworking-Projects/tree/main/boardgame-databse-website" target="_blank" rel="noopener noreferrer">Board Game Search Website</a> - Developed a full stack website that shows data for thousands of board games in an itemized table using Flask.</div>
+                        <div>5. <a href="https://github.com/lukepoley/rust-password-manager" target="_blank" rel="noopener noreferrer">Rust Password Manager</a> - A secure, CLI-based password manager written in Rust.</div>
+                        <div>6. Check out my <a href="https://github.com/lukepoley/" target="_blank" rel="noopener noreferrer">Github</a> for more projects</div>
                     </div>
                 );
                 break;
