@@ -42,11 +42,11 @@ function App() {
                         <div>My Projects:</div>
                         <div>1. <a href="https://github.com/lukepoley/Internetworking-Projects" target="_blank" rel="noopener noreferrer">Internetworking Projects</a> - A collection of computer networking projects exploring the Internet’s layered architecture, core protocols (TCP, UDP, IP, BGP, DNS), and real-world trade-offs through hands-on implementation and measurement. Includes: </div>
                         <div>
-                            <div>▪ A Python-based implementation of the early gopher protocol for peer to peer file sharing</div>
-                            <div>▪ Educational presentations on network topologies with discussion on bandwidth and latency and another
+                            <div>- A Python-based implementation of the early gopher protocol for peer to peer file sharing</div>
+                            <div>- Educational presentations on network topologies with discussion on bandwidth and latency and another
                                 presentation on how TCP works with each step in Wireshark in relation to a website’s components
                             </div>
-                            <div>▪ Blog-styled explainer on how BGP’s policy-based routing works between autonomous systems </div>
+                            <div>- Blog-styled explainer on how BGP’s policy-based routing works between autonomous systems </div>
                         </div>
                         <div>2. <a href="https://github.com/lukepoley/Sales-Tax-Automation" target="_blank" rel="noopener noreferrer">Sales Tax Automation & Audit Preparation Tool</a> - A high-performance Python-based automation tool designed to streamline the extraction, filtering, and reporting of Joint Interest Billing (JIB) data for tax compliance</div>
                         <div>3. <a href="https://github.com/lukepoley/Internetworking-Projects/tree/main/network-detection-app" target="_blank" rel="noopener noreferrer">Network Detection App</a> - A powerful Kotlin app that helps you analyze your WiFi network, detect signal dead zones, measure connection speed, and identify potential bandwidth hogs.</div>
